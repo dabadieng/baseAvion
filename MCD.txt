@@ -1,0 +1,38 @@
+Régles de gestion :
+Un pilote est caractérisé par un identifiant, un nom, un site de localisation.
+Un avion est caractérisé par un identifiant, un cn=ionstructeur, un modele, une capacité et un site de localisation.
+un vol est caractérisé par un numéro de vol, une date et heure de départ,  une date et heure d'arrivée, un site de départ, un site d'arrivvée.
+un vol est pris en chare par un pilote avec un avion
+
+<MCD>
+    <Entité>
+    pilote
+        - identifiant
+        - nom
+        - site
+
+    avion
+        - identifiant
+        - const
+        - modele
+        - capacité
+        - site
+    
+    vol
+        - numéro
+        - datetime depart
+        - datetime arrivée
+        - site départ
+        - site arrivée    
+    </Entité>
+
+    <Association>
+    Prendre en charge
+    - pilote 0,N
+    - vol 1,1
+
+    Affecter
+    - avion 0,N
+    - vol 1,1
+    </Association>
+</MCD>
